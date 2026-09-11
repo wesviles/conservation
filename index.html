@@ -39,10 +39,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-00feface57a40fb7a06c8694f9a70c45.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,12 +70,34 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>
+  body {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .quarto-title-block, header, nav, .navbar {
+    display: none !important;
+  }
+  main.content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  hr {
+    border-color: #30363d;
+    margin: 30px 0;
+  }
+  a {
+    color: #58a6ff;
+  }
+</style>
 
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -108,37 +130,34 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
-&lt;!DOCTYPE html&gt;
-
-
-<meta charset="UTF-8">
-<title>
-Preprint Viewer
-</title>
-<style>
-        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; font-family: sans-serif; }
-        #viewer { width: 100%; height: 90vh; border: none; }
-        footer { height: 10vh; display: flex; align-items: center; justify-content: center; background: #f9f9f9; border-top: 1px solid #ddd; font-size: 14px; }
-    </style>
-
-
-<iframe id="viewer" src="Viles-Preprint-Manuscript.pdf">
-</iframe>
-<footer>
-<span>This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0 License</a>.</span>
-</footer>
-
-
+<!-- Zenodo DOI Timestamp Badge -->
+<div style="margin-bottom: 25px;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://doi.org/10.5281/zenodo.22698737"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.22698737.svg" class="img-fluid figure-img"></a></p>
+<figcaption>DOI</figcaption>
+</figure>
+</div>
+</div>
+<!-- Manuscript Viewer -->
+<div style="margin-bottom: 30px;">
+<p><iframe src="Viles-Preprint-Manuscript.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0" width="100%" height="800px" style="border: 1px solid #30363d; border-radius: 6px; background-color: #161b22;"> This browser does not support PDFs. Please <a href="Viles-Preprint-Manuscript.pdf">download the PDF</a> to view it. </iframe></p>
+</div>
+<hr>
+<!-- License -->
+<div style="font-size: 0.9em; color: #8b949e;">
+<p>This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International (CC BY 4.0) License</a>.</p>
+</div>
 
 
 
@@ -216,7 +235,7 @@ Preprint Viewer
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/wesviles\.github\.io\/conservation\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
