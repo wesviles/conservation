@@ -117,6 +117,37 @@ ul.task-list li input[type="checkbox"] {
   a {
     color: #58a6ff;
   }
+  /* Default style: hide the mobile fallback notice */
+  .mobile-pdf-fallback {
+      display: none;
+  }
+  /* Mobile responsive style */
+  @media (max-width: 768px) {
+      .pdf-container iframe {
+          display: none; /* Hide the iframe on mobile devices */
+      }
+      .mobile-pdf-fallback {
+          display: block; /* Show the clean download option instead */
+          padding: 40px 20px;
+          background-color: #161b22;
+          border: 1px solid #30363d;
+          border-radius: 6px;
+          margin: 20px 0;
+      }
+      .download-btn {
+          display: inline-block;
+          padding: 12px 24px;
+          background-color: #238636;
+          color: #ffffff !important;
+          text-decoration: none;
+          border-radius: 6px;
+          font-weight: 600;
+          margin-top: 15px;
+      }
+      .download-btn:hover {
+          background-color: #2ea043;
+      }
+  }
 </style>
 
 
@@ -265,7 +296,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/wesviles\.github\.io\/conservation\/");
+        var filterRegex = new RegExp("https:\/\/maximumentropy\.net");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
