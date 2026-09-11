@@ -181,7 +181,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="paper-affiliation">
 <p>Northeastern University</p>
 </div>
-<div style="margin-bottom: 30px;">
+<div class="pdf-container">
 <p><iframe src="Viles-Preprint-Manuscript.pdf#toolbar=1&amp;navpanes=1&amp;scrollbar=1" allow="fullscreen" allowfullscsreen="" width="100%" height="800px" style="border: 1px solid #30363d; border-radius: 6px; background-color: #161b22;"> This browser does not support PDFs. Please <a href="Viles-Preprint-Manuscript.pdf">download the PDF</a> to view it. </iframe></p>
 </div>
 <hr>
@@ -265,7 +265,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/wesviles\.github\.io\/conservation\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
