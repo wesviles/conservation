@@ -75,7 +75,7 @@ format:
   Northeastern University
 </div>
 
-<div style="margin-bottom: 30px;">
+<div class="pdf-container">
   <iframe
     src="Viles-Preprint-Manuscript.pdf#toolbar=1&navpanes=1&scrollbar=1"
     allow="fullscreen"
