@@ -1,0 +1,19 @@
+project:
+  type: website
+
+website:
+  title: "On the intractability of approximating the antiferromagnetic Ising model"
+  navbar:
+    right:
+      - href: index.qmd
+        text: Home
+      - href: https://github.com/your-wesviles/conservation
+        text: GitHub
+  page-footer:
+    center: "This work is licensed under a [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: false
