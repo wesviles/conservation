@@ -117,17 +117,18 @@ ul.task-list li input[type="checkbox"] {
   a {
     color: #58a6ff;
   }
-  /* Default style: hide the mobile fallback notice */
+
+  /* Responsive CSS for Mobile PDF Support */
   .mobile-pdf-fallback {
       display: none;
   }
-  /* Mobile responsive style */
+
   @media (max-width: 768px) {
       .pdf-container iframe {
-          display: none; /* Hide the iframe on mobile devices */
+          display: none !important;
       }
       .mobile-pdf-fallback {
-          display: block; /* Show the clean download option instead */
+          display: block;
           padding: 40px 20px;
           background-color: #161b22;
           border: 1px solid #30363d;
@@ -213,11 +214,17 @@ ul.task-list li input[type="checkbox"] {
 <p>Northeastern University</p>
 </div>
 <div class="pdf-container">
-<p><iframe src="Viles-Preprint-Manuscript.pdf#toolbar=1&amp;navpanes=1&amp;scrollbar=1" allow="fullscreen" allowfullscsreen="" width="100%" height="800px" style="border: 1px solid #30363d; border-radius: 6px; background-color: #161b22;"> This browser does not support PDFs. Please <a href="Viles-Preprint-Manuscript.pdf">download the PDF</a> to view it. </iframe></p>
+<p><!-- Desktop Viewer (Hidden automatically on mobile) --> <iframe src="Viles-Preprint-Manuscript.pdf#toolbar=1&amp;navpanes=1&amp;scrollbar=1" width="100%" height="800px" style="border: 1px solid #30363d; border-radius: 6px; background-color: #161b22;" allow="fullscreen"> This browser does not support PDFs. Please <a href="Viles-Preprint-Manuscript.pdf">download the PDF</a> to view it. </iframe></p>
+<!-- Mobile Alternative (Triggered via media query) -->
+<div class="mobile-pdf-fallback">
+<pre><code>&lt;p style="color: #c9d1d9; font-size: 1.1rem; margin-bottom: 5px;"&gt;Mobile browsers cannot preview full PDFs natively.&lt;/p&gt;
+&lt;p style="color: #8b949e; font-size: 0.95rem;"&gt;Tap below to view or download the complete multi-page preprint manuscript.&lt;/p&gt;
+&lt;a href="Viles-Preprint-Manuscript.pdf" class="download-btn" target="_blank"&gt;Open Full PDF&lt;/a&gt;</code></pre>
+</div>
 </div>
 <hr>
 <div style="font-size: 0.9em; color: #8b949e;">
-<p>This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International (CC BY 4.0) License</a>.</p>
+<p>This work is licensed under a <a href="https://creativecommons.org" target="_blank">Creative Commons Attribution 4.0 International (CC BY 4.0) License</a>.</p>
 </div>
 
 
